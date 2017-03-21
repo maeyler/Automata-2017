@@ -1,0 +1,17 @@
+//Expression teacher
+//start with a jar File
+class java.io.File
+//start with a jar File
+f = new File("expr.jar"); //--> expr.jar 
+
+//convert f to URL
+i = f.toURI();
+//convert f to URL
+//u is a local jar file 
+u = i.toURL();
+//Load a class in u
+class mae.sss.Chooser
+//Load a class in u
+Chooser.loadClass(u, "expr.Parser");
+
+p = new Parser("4+5*2");
