@@ -60,13 +60,19 @@ public class Checker {
          expr();
          match(Token.RIGHT); 
       }
+      else if (tok == Token.IDENT)  {
+         match(Token.IDENT);
+         match(Token.LEFT);
+         expr();
+         match(Token.RIGHT); 
+      }
       else expected("Factor"); 
    }
    
    /** Test code -- syntax check for the sample String
     */   
    public static void main(String[] args) {
-      new Checker(sample).check();
+      new Checker(Parser.sample).check();
       System.out.println("Accepted");
    }
 }

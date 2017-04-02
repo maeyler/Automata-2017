@@ -10,7 +10,7 @@ public class Parser {
 
    Scanner lex;
    Token tok; 
-   final static String sample = "((3*8)-(5-3)*7)-(2*4)";
+   final static String sample = "sqrt(2*8)/2-cos(5-6+1)";
 
    public Parser(String s) { 
        lex = new Scanner(s); 
@@ -67,6 +67,14 @@ public class Parser {
          Expression e = expr();
          match(Token.RIGHT); 
          return e;
+      }
+      else if (tok == Token.IDENT)  {
+         String f = lex.sval;
+         match(Token.IDENT);
+         match(Token.LEFT);
+         Expression e = expr();
+         match(Token.RIGHT);
+         return new Function(f, e);
       }
       expected("Factor"); 
       return null;

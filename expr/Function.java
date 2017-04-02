@@ -13,15 +13,15 @@ public class Function implements Expression  {
    }
    public float fValue() {
       try{
-        Double d = 0;  //invoke met
+        Double d = (Double)met.invoke(null, exp.fValue()); 
         return d.floatValue();
       //IllegalAccessException  InvocationTargetException
       } catch (Exception e) {
         return Float.NaN;
       }
    }
-   public String toPostfix() { return name; }
-   public String toString() { return name; }
+   public String toPostfix() { return exp.toPostfix()+" "+name; }
+   public String toString() { return name+"("+exp+")"; }
    public String toTree() { return "implement this"; }
 
    static   Expression s = new Function("sqrt", new Constant(400));
