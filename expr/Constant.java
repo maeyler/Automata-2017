@@ -19,5 +19,5 @@ public class Constant implements Expression  {
          s = s.substring(0, s.length()-2);
       return s;
    }
-   public String toTree() { return "implement this"; }
+   public String toTree() { return toString() ; }
 }

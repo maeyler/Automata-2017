@@ -22,7 +22,9 @@ public class Function implements Expression  {
    }
    public String toPostfix() { return exp.toPostfix()+" "+name; }
    public String toString() { return name+"("+exp+")"; }
-   public String toTree() { return "implement this"; }
+   public String toTree() { 
+       return name+"\n"+Binary.addBlanks(exp); 
+   }
 
    static   Expression s = new Function("sqrt", new Constant(400));
    static   Expression c = new Function("cos", new Constant(0));

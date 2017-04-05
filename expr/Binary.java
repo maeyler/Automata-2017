@@ -36,5 +36,13 @@ public class Binary implements Expression  {
       if (prec<p ||(prec==p && !atRight)) return s;
       return Token.LEFT +s+ Token.RIGHT;
    }
-   public String toTree() { return "implement this"; }
+   static String addBlanks(Expression e) {
+       String[] a = e.toTree().split("\n");
+       String t = "";
+       for (String s : a) t += "  "+s+"\n";
+       return t;
+   }
+   public String toTree() { 
+       return oper.name()+"\n"+addBlanks(left)+addBlanks(right); 
+   }
 }
