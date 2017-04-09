@@ -2,7 +2,7 @@
 //start with a jar File
 class java.io.File
 //start with a jar File
-f = new File("expr.jar"); //--> expr.jar 
+f = new File("expr.jar"); //--> expr.jar 
 
 //convert f to URL
 i = f.toURI();
@@ -12,6 +12,39 @@ u = i.toURL();
 //Load a class in u
 class mae.sss.Chooser
 //Load a class in u
-Chooser.loadClass(u, "expr.Parser");
+Chooser.loadClass(u, "expr.Sampler");
 
-p = new Parser("4+5*2");
+//make an instance
+s = new Sampler(); //--> Sampler
+//display the Sampler 
+frm = Menu.toWindow(s); //--> frame5
+//set its location
+frm.setLocation(80, 250);
+//get the Listener
+a = s.getActionListener();
+
+//calculate the value
+//same as ENTER key
+a.actionPerformed(null);
+//make a variable
+s.calculate("m");
+//another calculation
+s.calculate("27*m");
+//another variable
+s.calculate("x");
+//another calculation
+s.calculate("x/3-5*m");
+//last Expression
+e = a.lastE;
+//its value
+e.fValue(); //--> 12.0
+
+//Load class Variable 
+L = Chooser.getLoader(s);
+//Load class Variable 
+L.loadClass("expr.Variable");
+//invoke a static method
+Variable.setValue("m",1);
+//value has been changed
+e.fValue(); //--> 22.0
+
