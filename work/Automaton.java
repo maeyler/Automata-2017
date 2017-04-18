@@ -11,7 +11,7 @@ public abstract class Automaton {
    
    static void header(String w) {
       for (int j=0; j<w.length(); j++) 
-          System.out.printf("%8s", w.charAt(j));
+          System.out.printf("%6s", w.charAt(j));
       System.out.println();
    }
    static void test(Automaton a, String[] args) {

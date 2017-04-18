@@ -18,7 +18,7 @@ class DFA extends Automaton {
          char c = w.charAt(j);
          State t = delta(q, c);
          //System.out.println(j+": ("+q+", "+c+") -> "+t);
-         System.out.printf(" ----> %s", t);
+         System.out.printf(" --> %s", t);
          if (t == null) return false;
          q = t;
       }
