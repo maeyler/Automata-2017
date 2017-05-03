@@ -1,0 +1,25 @@
+gcd(m,n) {
+  while (m != n) {
+    if (m < n) { // use the larger
+      n = n - m;
+    } else {
+      m = m - n;
+    }
+  }
+  return m;
+}
+testGCD() {
+  var x,y;
+  println "Greatest Common Divisor";
+  read x;
+  while (x>0) {
+    read y;
+    if (y>0) {
+      println x," ",y," GCD=", gcd(x,y);
+      read x;
+    } else {
+      println "invalid value: ", y;
+    }
+  }
+}
+

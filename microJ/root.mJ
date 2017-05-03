@@ -1,0 +1,19 @@
+root(x) {
+  var r, dif, eps;
+  r = 1; dif = 1; eps = 0.000001;
+  while (dif > eps) {
+    r = (r+x/r)/2;
+    dif = abs(r*r/x-1);
+    println r:10, dif:14;
+  }
+  return r;
+}
+compSqrt() {
+  var p; println "Square root";
+  read "number", p;
+  while (p > 0) {
+    println "root = ", root(p);
+    println "sqrt = ", sqrt(p);
+    read "number", p;
+  }
+}

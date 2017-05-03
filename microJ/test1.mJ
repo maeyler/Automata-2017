@@ -1,0 +1,12 @@
+test() {
+  var a, b, c;
+  println "Some expressions";
+  a = -40/(-2*5);
+  print "a = ", a, "   -1/a = ", -1/a;
+  println "   2*a = ", 2*a;
+  println "a = 2; b = 3; c = 5;";
+  a = 2; b = 3; c = 5;
+  print "b*8-(c-b)*7-(a*c-b)/(c/(a+b)) = ";
+  print  b*8-(c-b)*7-(a*c-b)/(c/(a+b));
+}
+

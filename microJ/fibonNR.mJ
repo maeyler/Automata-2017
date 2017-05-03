@@ -1,0 +1,11 @@
+fibon() {
+  var f, f0, f1, k;
+  println "Fibonacci -- non-recursive";
+  f0 = 0; f1 = 1; k = 1;
+  while (k <= 20)   {
+    f = f0 + f1;
+    println k:3, f:10;
+    f0 = f1; f1 = f; k = k+1;
+  }
+}
+

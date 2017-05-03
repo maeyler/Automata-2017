@@ -1,0 +1,23 @@
+//MicroJ teacher
+//start with a jar File
+class java.io.File
+//start with a jar File
+f = new File("mj1.jar");
+//convert f to URL
+i = f.toURI();
+//convert f to URL
+//u is a local jar file 
+u = i.toURL();
+//Load a class in u
+class mae.sss.Chooser
+//Load a class in u
+Chooser.loadClass(u, "mae.mj3.MicroJ3");
+
+//microJ source File
+g = new File("microJ", "test1.mJ");
+//open the file
+p = new MicroJ3(g);
+//parse the file
+m = p.parse();
+//display as a tree
+x = Menu.toTree(m);

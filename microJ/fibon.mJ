@@ -1,0 +1,19 @@
+fib(n)  {
+  var f;
+  if (n <= 1)  {
+    return 1;
+  } else {
+    f = fib(n-1); 
+    return f + fib(n-2); 
+  }
+}
+test()  {
+  var k;
+  println "Fibonacci"; 
+  k = 1;
+  while (k <= 16)   {
+    println k:3, fib(k):10;
+    k = k+1;
+  }
+}
+

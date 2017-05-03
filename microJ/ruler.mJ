@@ -1,0 +1,11 @@
+M(k)  { print k; } //Mark
+R(n)  {
+  if (n == 0) { return; }
+  R(n-1); M(n); R(n-1);
+}
+ruler(n)  {
+  n = 5; read n;
+  M(n); R(n); M(n);
+  println;
+}
+

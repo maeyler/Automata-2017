@@ -1,0 +1,12 @@
+harmon(M, k, max) {
+   var t, dy, y;
+   println "Simple Harmonic Motion";
+   M = 30; k = 0.06; max = 1000;  
+   t = 0; dy = 0; y = M;  
+   while (t < max) {    
+      println t:4," ", 0:y+M+1;    
+      t = t + 1;    
+      dy= dy- k*y;    
+      y = y + dy;  
+   }
+}

@@ -1,0 +1,11 @@
+sine(a, b, max) {
+   var t, dt, y, M;
+   println "Harmonics of sine";
+   read a; read b; max = 100;  
+   t = 0; dt = 0.3; M = a+b+1;
+   while (t < max) {    
+      y = a*sin(t) + b*sin(2*t);  
+      println round(10*t):4," ", 0:y+M;    
+      t = t + dt;    
+   }
+}

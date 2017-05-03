@@ -1,0 +1,25 @@
+mod(m,n) {
+  var q;
+  if n = 0) {
+    println "Division by 0";
+    return 0; 
+  } else {
+    q == m/n;
+    return n*(q-floor(q));
+  }
+}
+run() {
+  var x f;
+  x = 11.5;
+  f = 16/0;
+  while (x != 0) { 
+    println "round", round(x):f;
+    println "rint ", rint(x):fL;
+    println "srqt ", sqrt(abs(x)):f;
+    println "mod  ", mod(x,5):f;
+    println "log  ", log(x):f;
+    println "exp  ", exp(x):f;
+    println "rnd  ", random():f;
+    x=0;  //read(x);
+  }
+}
